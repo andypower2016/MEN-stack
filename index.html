@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Express test</title>
+
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+      .bgimg1 {
+        background-image: url("http://localhost:8000/images/bkg.JPG"); /* The image used */
+        height: 100%;  /* Full height */
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .buttonStyle1 {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      .buttonStyle2 {
+        background-color: #4c90af;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+  
+    </style>
+  </head>
+
+  
+
+  <body>
+    <div class="bgimg1">
+      
+      <div id="uploadfile" style="text-align: center; ">
+        
+        <form action="fileupload" method="post" enctype="multipart/form-data">
+          <input id="uploadFileBtn" class="buttonStyle2" type="file" name="filetoupload">
+          <input id="submitBtn" class="buttonStyle2" type="submit" value="upload">
+          
+        </form>
+
+        <form action="fileexport" method="post" enctype="multipart/form-data"></form>  
+          <button id="exportBtn" class="buttonStyle1">export to DB</button>
+        </form>
+
+        <img id="uploadImage" src="" alt="None" style="width:400px;height:400px;" />
+      </div>
+      
+      <script src=".\\client.js"></script>
+    </div>
+  </body>
+
+</html>
